@@ -1,0 +1,19 @@
+// Skrives oppefra og ned i markdown
+
+
+## 2012-06-02 GitHub etableret
+
+Så virker GitHub: Repository kaldet PipelineTool
+
+
+## 2012-06-02
+
+Overvejer hvordan man kan bruge Highrise som grundlag for en kundeliste, og så man også hurtigt kan linke tilbage og få opdateret en linje i Highrise.
+
+[Link til Highrise API](https://github.com/37signals/highrise-api)
+
+Man kan læse alt her også [XML modellen for Companies](https://github.com/37signals/highrise-api/blob/master/sections/companies.md)
+
+
+
+
