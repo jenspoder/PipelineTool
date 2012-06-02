@@ -1,0 +1,37 @@
+
+// Denne model beskriver hvordan data til tenders i pipeline system skal fungere...
+
+
+// Id. Tanken er at give hver enkelt tender et tender-id, og gemme hver enkelt revision, og så skelne mellem hvilke der er aktive.
+
+Id : Auto-increment
+Tender-id : Den specifikke tender-revision
+Status : active eller old		// til at skelne mellem den nyeste og ældre
+Solgt : Ja eller Nej
+Tabt : Ja eller Nej
+
+
+Kunde : Reference til et kunde-id  // Kunde-id kan samples fra Google kundelisten
+Tender-navn : Unikt navn for projektet
+
+Værdi : Den samlede værdi af projektet
+
+Andel_Afd1:
+Andel_Afd2:
+Andel_Afd3:
+Andel_Afd4:
+Andel_Afd5:  			// Disse skal gerne samlet give 100%
+
+Sandsynlighed : En procentsats for hvor sandsynligt projektet er
+
+Kontaktdirektør
+Projektleder
+
+Tag : Fritekst-felt, kan bruges til at tilføje produktnavn
+
+// TID
+
+Sidste kontakt:
+Timing: 
+
+
