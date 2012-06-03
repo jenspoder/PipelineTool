@@ -11,7 +11,7 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -79,7 +79,6 @@
     </div>
 
 		<div class="container">
-		<br>
 		      <h1>Pipeline per afdeling indeværende kvartal</h1>
 		      <h6>Her er der et overblik over pipeline i forhold til målet for hver enkelt afdeling.</h6>
 		      
