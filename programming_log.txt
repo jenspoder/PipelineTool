@@ -3,11 +3,11 @@
 TODOS:
 
 	FRONTEND:
-		- Få rettet topbarren til så den ikke hænger. Det ser åndsvagt ud.
+		- Få lavet grundstruktur i navigation
 	
 	STRUKTUR:
 		- Få etableret grundfunktioner (render, calculate)
-		- Standard var_includes
+		- Standard var_includes (til database hook-up og navne og den slags)
 
 ---------------------------
 ## 2012-06-03 En masse grundstruktur på plads
