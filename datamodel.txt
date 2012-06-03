@@ -2,10 +2,49 @@
 // Denne model beskriver hvordan data til tenders i pipeline system skal fungere...
 
 
-// Id. Tanken er at give hver enkelt tender et tender-id, og gemme hver enkelt revision, og sŒ skelne mellem hvilke der er aktive.
+/** Id. Tanken er at give hver enkelt tender et tender-id, og gemme hver enkelt revision, og sŒ skelne mellem hvilke der er aktive.
+
+
+**/
+
+
+Grundl¾ggende tabeller
+
+###tender:
+
+	* id
+	* kundeid
+	* projekt
+	* status
+	* kd
+	* pl
+	* tag
+	
+###tenderrevision
+
+	* id
+	* tenderid
+	* value
+	* sandsynlighed
+	* andel1
+	* andel2
+	* andel3
+	* andel4
+	* andel5
+	* start
+	* slut
+	* opdateret
+	 
+###kunder:
+
+	* id
+	* kundenummer
+	* kundenavn
+	* highriselink 
+
+
 
 Id : Auto-increment
-Tender-id : Den specifikke tender-revision
 Status : active eller old		// til at skelne mellem den nyeste og ¾ldre
 Solgt : Ja eller Nej
 Tabt : Ja eller Nej
