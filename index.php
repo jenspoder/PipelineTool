@@ -11,8 +11,8 @@
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <meta charset="ISO-8859-1">
+    <title>Peytz & Co pipeline tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -95,7 +95,7 @@
     </div>
 
 		<div class="container">
-		      <h1>Pipeline per afdeling <small>indevÃ¦rende kvartal</small></h1>
+		      <h1>Pipeline per afdeling <small>indeværende kvartal</small></h1>
 		      <hr>
 		      
 		      
@@ -104,7 +104,7 @@
 				      		<h3>Analyse:</h3>
 				      		<div id='chart_analyse'></div>
 				      		<ul>
-				      			<li>MÃ¥l: 540</li>
+				      			<li>Mål: 540</li>
 				      		</ul>
 			      		</div> <!-- /span3 -->
 			      		<div class="span3">
@@ -131,7 +131,7 @@
 				      
 			      </div>
 			 <hr>
-			 <div class="well">Her kommer der noget bundvÃ¦rk</div>
+			 <div class="well">Her kommer der noget bundværk</div>
 			 
 		</div> <!-- /container -->
 

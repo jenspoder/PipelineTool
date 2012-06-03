@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <!-- Le styles -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-bottom: 40 px;
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <meta charset="ISO-8859-1">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -27,6 +28,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
   </head>
 
   <body>
@@ -39,38 +41,46 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Pipeline Tool</a>
+          <a class="brand" href="index.php">Pipeline Tool</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Peytz overblik</a></li>
-              <li><a href="#about">Afdeling pipeline</a></li>
-              <li><a href="#contact">Personlig pipeline</a></li>
+              <li class="active"><a href="index.php">Peytz overblik</a></li>
             </ul>
+            <ul class="nav">
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+              	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Afdeling pipeline <b class="caret"></b></a>
+              		<ul class="dropdown-menu">
+              			<li><a href="afdeling.php?afd=1">Analyse</a></li>
+              			<li><a href="afdeling.php?afd=2">Design</a></li>              			
+              			<li><a href="afdeling.php?afd=3">Nyhedsbreve</a></li>
+              			<li><a href="afdeling.php?afd=4">Udvikling</a></li>
+              		</ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li><p class="navbar-text">Din pipeline:</p></li>
+            </ul>
+            <form class="navbar-search pull-left" method="post" action="personlig.php">
+            	<input name="pipelineejer" type="text" class="search-query" placeholder="indtast initialer">
+            </form>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-		<div class="container">
-		
-		      <h1>Pipeline per afdeling</h1>
-		      <h6>Her er der et overblik over pipeline i forhold til målet for hver enkelt afdeling.</h6>
-		      
-			      <div id="pipeline-gauges">
-				      Her kommer en liste af pipeline gauges bygget med Google Charts
-				  </div>     
-			      
-				  <h2>Samlet overblik periodiseret</h2>
-			      
-			      <div id="overblik-periodiseret">
-			
-				      Her kommer google charts med overblik periodiseret	      	      
-				      
-			      </div>
-		</div> <!-- /container -->
+    <div class="container">
+    
+    
+    
+	</div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
+    
+    <script src="bootstrap/js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+    
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap-transition.js"></script>
