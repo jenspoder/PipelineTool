@@ -2,12 +2,18 @@
 -- version 3.3.9.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jun 04, 2012 at 11:30 AM
--- Server version: 5.5.9
--- PHP Version: 5.3.5
+-- Vært: localhost
+-- Genereringstid: 04. 06 2012 kl. 11:58:33
+-- Serverversion: 5.5.9
+-- PHP-version: 5.3.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `pipelinetool`
@@ -16,7 +22,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kunder`
+-- Struktur-dump for tabellen `kunder`
 --
 
 CREATE TABLE `kunder` (
@@ -27,10 +33,15 @@ CREATE TABLE `kunder` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=1 ;
 
+--
+-- Data dump for tabellen `kunder`
+--
+
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tender`
+-- Struktur-dump for tabellen `tender`
 --
 
 CREATE TABLE `tender` (
@@ -38,16 +49,22 @@ CREATE TABLE `tender` (
   `kundeid` int(11) DEFAULT NULL,
   `projekt` text COLLATE utf8_danish_ci,
   `status` text COLLATE utf8_danish_ci NOT NULL,
-  `kd` varchar(11) COLLATE utf8_danish_ci DEFAULT NULL,
-  `pl` varchar(11) COLLATE utf8_danish_ci DEFAULT NULL,
+  `kd` tinytext COLLATE utf8_danish_ci,
+  `pl` tinytext COLLATE utf8_danish_ci,
   `tag` text COLLATE utf8_danish_ci,
+  `pipelineejer` tinytext COLLATE utf8_danish_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=1 ;
+
+--
+-- Data dump for tabellen `tender`
+--
+
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tenderrevision`
+-- Struktur-dump for tabellen `tenderrevision`
 --
 
 CREATE TABLE `tenderrevision` (
@@ -65,3 +82,8 @@ CREATE TABLE `tenderrevision` (
   `opdateret` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=1 ;
+
+--
+-- Data dump for tabellen `tenderrevision`
+--
+

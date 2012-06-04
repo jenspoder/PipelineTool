@@ -2,7 +2,7 @@
 
 /** 
 
-Modellen for denne side er følgende:
+Modellen for denne side er fÃ¸lgende:
 
 Standard
 - Inkluder standardvariabler
@@ -16,7 +16,7 @@ Hent data fra database
 - henter tenders where pipeline-ejer er lig det der er valgt gemmer i array - her efter LOOP der
 	- henter nyeste tender-revision
 	- henter data fra kunde-id'er
-- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specfikt på den relevante afdeling - løses i pulldown
+- Render tabellen (det interessante bliver hvordan jeg fÃ¥r pipeline til at vÃ¦re specfikt pÃ¥ den relevante afdeling - lÃ¸ses i pulldown
 
 **/
 
@@ -38,7 +38,7 @@ $pipelineejer = strtoupper($pipelineejer);
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <title><? echo $pipelineejer; ?>'s pipeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -103,7 +103,7 @@ $pipelineejer = strtoupper($pipelineejer);
 				<tr>
 					<th>Kunde</th>
 					<th>Projekt</th>
-					<th>Værdi</th>
+					<th>VÃ¦rdi</th>
 					<th>Analyse</th>
 					<th>Sandsynlighed</th>
 					<th>Forventet analyse</th>
@@ -113,7 +113,7 @@ $pipelineejer = strtoupper($pipelineejer);
 				</tr>
 				<tr>
 					<td>3F</td>
-					<td>Mobil spørgeskema</td>
+					<td>Mobil spÃ¸rgeskema</td>
 					<td>100000</td>					
 					<td>50000</td>
 					<td>55%</td>
@@ -125,7 +125,7 @@ $pipelineejer = strtoupper($pipelineejer);
 			</table>
 		</div>		
 	 
-	 <p><a class="btn" href="#">Tilføj nyt projekt</a></p>
+	 <p><a class="btn" href="#">TilfÃ¸j nyt projekt</a></p>
 	</div> <!-- /container -->
 
     <!-- Le javascript
