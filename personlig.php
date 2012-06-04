@@ -1,5 +1,7 @@
 <?
 
+require_once("appvars.php");
+
 /** 
 
 Modellen for denne side er følgende:
@@ -112,9 +114,9 @@ $pipelineejer = strtoupper($pipelineejer);
 					<th>Solgt / Tabt</th>				
 				</tr>
 				<tr>
-					<td>3F</td>
+					<td>3F <a href="https://peytzco.highrisehq.com/companies/33185520-3f"><i class="icon-share"></i></a></td>
 					<td>Mobil spørgeskema</td>
-					<td>100000</td>					
+					<td><a data-toggle="modal" href="#retValue">100000</a></td>					
 					<td>50000</td>
 					<td>55%</td>
 					<td>27000</td>
@@ -126,6 +128,25 @@ $pipelineejer = strtoupper($pipelineejer);
 		</div>		
 	 
 	 <p><a class="btn" href="#">Tilføj nyt projekt</a></p>
+	 
+	 
+	<!-- Here be modals -->
+	
+<div class="modal hide" id="retValue">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal">×</button>
+	<h3>Ret værdi</h3>
+	</div>
+	<div class="modal-body">
+	<p>Her rettes der så i en embedded form</p>
+	</div>
+	<div class="modal-footer">
+	<a href="#" class="btn" data-dismiss="modal">Close</a>
+	<a href="#" class="btn btn-primary">Save changes</a>
+	</div>
+</div>
+	
+	
 	</div> <!-- /container -->
 
     <!-- Le javascript
