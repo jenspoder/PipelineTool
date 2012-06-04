@@ -18,7 +18,7 @@ Hent data fra database
 - henter tenders where pipeline-ejer er lig det der er valgt gemmer i array - her efter LOOP der
 	- henter nyeste tender-revision
 	- henter data fra kunde-id'er
-- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specfikt på den relevante afdeling - løses i pulldown
+- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specfikt på den relevante afdeling - l√∏ses i pulldown
 
 **/
 
@@ -82,7 +82,7 @@ $pipelineejer = strtoupper($pipelineejer);
 				</tr>
 				<tr>
 					<td>3F <a href="https://peytzco.highrisehq.com/companies/33185520-3f"><i class="icon-share"></i></a></td>
-					<td>Mobil sp�rgeskema</td>
+					<td>Mobil spørgeskema</td>
 					<td><a data-toggle="modal" href="#retValue">100000</a></td>					
 					<td>50000</td>
 					<td>55%</td>
@@ -94,18 +94,18 @@ $pipelineejer = strtoupper($pipelineejer);
 			</table>
 		</div>		
 	 
-	 <p><a class="btn" href="#">Tilf�j nyt projekt</a></p>
+	 <p><a class="btn" href="#">Tilføj nyt projekt</a></p>
 	 
 	 
 	<!-- Here be modals -->
 	
 <div class="modal hide" id="retValue">
 	<div class="modal-header">
-	<button type="button" class="close" data-dismiss="modal">�</button>
-	<h3>Ret v�rdi</h3>
+	<button type="button" class="close" data-dismiss="modal">X</button>
+	<h3>Ret værdi</h3>
 	</div>
 	<div class="modal-body">
-	<p>Her rettes der s� i en embedded form</p>
+	<p>Her rettes der så i en embedded form</p>
 	</div>
 	<div class="modal-footer">
 	<a href="#" class="btn" data-dismiss="modal">Close</a>
