@@ -2,15 +2,15 @@
 // Denne model beskriver hvordan data til tenders i pipeline system skal fungere...
 
 
-/** Id. Tanken er at give hver enkelt tender to tabeller. Den statiske information som ikke i udgangspunktet bliver opdateret, og sŒ de data som man vil opdatere l¿bende (ligger i tabellen tenderrevision).
+/** Id. Tanken er at give hver enkelt tender to tabeller. Den statiske information som ikke i udgangspunktet bliver opdateret, og sÃ¥ de data som man vil opdatere lÃ¸bende (ligger i tabellen tenderrevision).
 
 
 **/
 
 
-Grundl¾ggende tabeller
+GrundlÃ¦ggende tabeller
 
-###tender:    //kan pŒ senere tidspunkt integreres via API til Highrise til deals
+###tender:    //kan pÃ¥ senere tidspunkt integreres via API til Highrise til deals
 
 	* id
 	* kundeid
@@ -35,7 +35,7 @@ Grundl¾ggende tabeller
 	* slut
 	* opdateret
 	 
-###kunder:   // kan pŒ senere tidspunkt integreres til vores Google Docs via API
+###kunder:   // kan pÃ¥ senere tidspunkt integreres til vores Google Docs via API
 
 	* id
 	* kundenummer

@@ -3,24 +3,24 @@
 TODOS:
 
 	FRONTEND:
-		- Få lavet grundstruktur i navigation
+		- F√• lavet grundstruktur i navigation
 	
 	STRUKTUR:
-		- Få etableret grundfunktioner (render, calculate)
+		- F√• etableret grundfunktioner (render, calculate)
 		- Standard var_includes (til database hook-up og navne og den slags)
 
 ---------------------------
-## 2012-06-03 En masse grundstruktur på plads
+## 2012-06-03 En masse grundstruktur p√• plads
 
-Har endelig fået lavet en masse grundstruktur. Der er stadig rigtig meget at pille med.
+Har endelig f√•et lavet en masse grundstruktur. Der er stadig rigtig meget at pille med.
 
-* Funktioner og Renderings vil jeg lægge i hver sin include-dims
+* Funktioner og Renderings vil jeg l√¶gge i hver sin include-dims
 * Det samme med grund-vars
 
-Sidder og kigger på en AJAX tutorial der viser hvordan man kan poste til MySQL med AJAX og Jquery. Ser fedt ud.
-Vil være meget nyttigt i dette projekt tror jeg.
+Sidder og kigger p√• en AJAX tutorial der viser hvordan man kan poste til MySQL med AJAX og Jquery. Ser fedt ud.
+Vil v√¶re meget nyttigt i dette projekt tror jeg.
 
-Overvejer lidt om jeg skal vente med at komme styling på til senere. Men hvorfor egentlig. Den giver jo en fantastiks masse muligheder.
+Overvejer lidt om jeg skal vente med at komme styling p√• til senere. Men hvorfor egentlig. Den giver jo en fantastiks masse muligheder.
 
 
 Her er links til AJAX tutorials:
@@ -30,15 +30,15 @@ Her er links til AJAX tutorials:
 
 ## 2012-06-02 GitHub etableret
 
-Så virker GitHub: Repository kaldet PipelineTool
+S√• virker GitHub: Repository kaldet PipelineTool
 
 ## 2012-06-02
 
-Overvejer hvordan man kan bruge Highrise som grundlag for en kundeliste, og så man også hurtigt kan linke tilbage og få opdateret en linje i Highrise.
+Overvejer hvordan man kan bruge Highrise som grundlag for en kundeliste, og s√• man ogs√• hurtigt kan linke tilbage og f√• opdateret en linje i Highrise.
 
 [Link til Highrise API](https://github.com/37signals/highrise-api)
 
-Man kan læse alt her også [XML modellen for Companies](https://github.com/37signals/highrise-api/blob/master/sections/companies.md)
+Man kan l√¶se alt her ogs√• [XML modellen for Companies](https://github.com/37signals/highrise-api/blob/master/sections/companies.md)
 
 
 

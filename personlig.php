@@ -4,7 +4,7 @@ require_once("appvars.php");
 
 /** 
 
-Modellen for denne side er følgende:
+Modellen for denne side er fÃ¸lgende:
 
 Standard
 - Inkluder standardvariabler
@@ -18,7 +18,7 @@ Hent data fra database
 - henter tenders where pipeline-ejer er lig det der er valgt gemmer i array - her efter LOOP der
 	- henter nyeste tender-revision
 	- henter data fra kunde-id'er
-- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specfikt på den relevante afdeling - løses i pulldown
+- Render tabellen (det interessante bliver hvordan jeg fÃ¥r pipeline til at vÃ¦re specfikt pÃ¥ den relevante afdeling - lÃ¸ses i pulldown
 
 **/
 
@@ -40,7 +40,7 @@ $pipelineejer = strtoupper($pipelineejer);
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
     <title><? echo $pipelineejer; ?>'s pipeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -62,40 +62,7 @@ $pipelineejer = strtoupper($pipelineejer);
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.php">Pipeline Tool</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="index.php">Peytz overblik</a></li>
-            </ul>
-            <ul class="nav">
-              <li class="divider-vertical"></li>
-              <li class="dropdown">
-              	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Afdeling pipeline <b class="caret"></b></a>
-              		<ul class="dropdown-menu">
-              			<li><a href="afdeling.php?afd=1">Analyse</a></li>
-              			<li><a href="afdeling.php?afd=2">Design</a></li>              			
-              			<li><a href="afdeling.php?afd=3">Nyhedsbreve</a></li>
-              			<li><a href="afdeling.php?afd=4">Udvikling</a></li>
-              		</ul>
-              </li>
-              <li class="divider-vertical"></li>
-              <li><p class="navbar-text">Din pipeline:</p></li>
-            </ul>
-            <form class="navbar-search pull-left" method="post" action="personlig.php">
-            	<input name="pipelineejer" type="text" class="search-query" placeholder="<? echo $pipelineejer; ?>">
-            </form>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  	<? require_once('../PipelineTool/navigation.php'); ?>
 
     <div class="container">
 		<div id="table-area">
@@ -105,7 +72,7 @@ $pipelineejer = strtoupper($pipelineejer);
 				<tr>
 					<th>Kunde</th>
 					<th>Projekt</th>
-					<th>Værdi</th>
+					<th>VÃ¦rdi</th>
 					<th>Analyse</th>
 					<th>Sandsynlighed</th>
 					<th>Forventet analyse</th>
@@ -145,8 +112,7 @@ $pipelineejer = strtoupper($pipelineejer);
 	<a href="#" class="btn btn-primary">Save changes</a>
 	</div>
 </div>
-	
-	
+		
 	</div> <!-- /container -->
 
     <!-- Le javascript
