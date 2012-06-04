@@ -81,15 +81,9 @@ $pipelineejer = strtoupper($pipelineejer);
 					<th>Solgt / Tabt</th>				
 				</tr>
 				<tr>
-<<<<<<< HEAD
-					<td>3F</td>
-					<td>Mobil spÃ¸rgeskema</td>
-					<td>100000</td>					
-=======
 					<td>3F <a href="https://peytzco.highrisehq.com/companies/33185520-3f"><i class="icon-share"></i></a></td>
 					<td>Mobil spørgeskema</td>
 					<td><a data-toggle="modal" href="#retValue">100000</a></td>					
->>>>>>> master
 					<td>50000</td>
 					<td>55%</td>
 					<td>27000</td>
@@ -100,9 +94,6 @@ $pipelineejer = strtoupper($pipelineejer);
 			</table>
 		</div>		
 	 
-<<<<<<< HEAD
-	 <p><a class="btn" href="#">TilfÃ¸j nyt projekt</a></p>
-=======
 	 <p><a class="btn" href="#">Tilføj nyt projekt</a></p>
 	 
 	 
@@ -121,9 +112,7 @@ $pipelineejer = strtoupper($pipelineejer);
 	<a href="#" class="btn btn-primary">Save changes</a>
 	</div>
 </div>
-	
-	
->>>>>>> master
+		
 	</div> <!-- /container -->
 
     <!-- Le javascript
