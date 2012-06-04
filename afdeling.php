@@ -33,40 +33,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.php">Pipeline Tool</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.php">Peytz overblik</a></li>
-            </ul>
-            <ul class="nav">
-              <li class="divider-vertical"></li>
-              <li class="dropdown">
-              	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Afdeling pipeline <b class="caret"></b></a>
-              		<ul class="dropdown-menu">
-              			<li><a href="afdeling.php?afd=1">Analyse</a></li>
-              			<li><a href="afdeling.php?afd=2">Design</a></li>              			
-              			<li><a href="afdeling.php?afd=3">Nyhedsbreve</a></li>
-              			<li><a href="afdeling.php?afd=4">Udvikling</a></li>
-              		</ul>
-              </li>
-              <li class="divider-vertical"></li>
-              <li><p class="navbar-text">Din pipeline:</p></li>
-            </ul>
-            <form class="navbar-search pull-left" method="post" action="personlig.php">
-            	<input name="pipelineejer" type="text" class="search-query" placeholder="indtast initialer">
-            </form>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  	<? require_once('../PipelineTool/navigation.php'); ?>
 
     <div class="container">
     

@@ -2854,6 +2854,11 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   line-height: 60px;
 }
+.navbar .navbar-text-active {
+  margin-bottom: 0;
+  line-height: 60px;
+  color: white;
+}
 .navbar .navbar-link {
   color: #999999;
 }
