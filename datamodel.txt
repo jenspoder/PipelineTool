@@ -40,8 +40,7 @@ Grundlæggende tabeller
 	* id
 	* kundenummer
 	* kundenavn
-	* highriselink 
-	* kd
+	* highriselink
 
 
 

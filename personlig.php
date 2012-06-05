@@ -91,21 +91,51 @@ $pipelineejer = strtoupper($pipelineejer);
 				<?
 				
 				// få forbindelse til MySQL Server
-				$dbc = mysqli_connect($db_host, $db_user, $db_pass, $db) or die ('error connecting to mysql server');				
+				$dbc = mysqli_connect($db_host, $db_user, $db_pass, $db) or die ('error connecting to mysql server');		
+				
+				// kode fra et forsøg på at bruge set names til at slippe af med utf-8 problemer
+				//$set_names = mysqli_query("SET NAMES 'utf8'") or die ('no set names');
+				//$set_character_set = mysqli_query("SET CHARACTER_SET utf8") or die ('no set chars');
+				
+				//detector der viser charset - to be deleted
+				
+				/**
+				$charset = mysqli_client_encoding($dbc);
+				echo "The current character set is: $charset\n"; **/
+				
 				// henter tenders fra tenders
+				
 				$get_tenders_query = "SELECT kundeid, projekt, kd, tag FROM tender WHERE pipelineejer = '$pipelineejer' AND status = '1'";
 
 				//kør sql
-				$result = mysqli_query($dbc, $get_tenders_query) or die("Kunne ikke hente tenders");
+				$result_tenders = mysqli_query($dbc, $get_tenders_query) or die("Kunne ikke hente tenders");
 
-				while ($row = mysqli_fetch_array($result)){
+				while ($row = mysqli_fetch_array($result_tenders)){
 				
-				$kundeid = $row[kundeid];
-				$projekt = $row[projekt];
-				$kd = $row[kd];
-				$tag = $row[tag];
-				
-				echo "<h1>" . $projekt . "</h1><ul><li>Kundeid: " . $kundeid . "</li><li>Tag: " . $tag . "</li><li>Kontaktdirektør: " . $kd . "</li></ul>";
+					$kundeid = $row[kundeid];
+					$projekt = $row[projekt];
+					$projekt = utf8_encode($projekt);
+					$kd = $row[kd];
+					$tag = $row[tag];
+					$tag = utf8_encode($tag);
+					
+					// Læs kunde-navn fra kunde-id
+					
+					
+					$get_kundedata_query = "SELECT kundenavn, kundenummer, highriselink FROM kunder WHERE id = '$kundeid'";
+					
+					//kør sql
+					$result_kunder = mysqli_query($dbc, $get_kundedata_query) or die("Kunne ikke hente kundedata");
+					
+					while ($row = mysqli_fetch_array($result_kunder)){
+						
+						$kundenavn = $row[kundenavn];
+						$kundenavn = utf8_encode($kundenavn);
+						$kundenummer = $row[kundenummer];
+						$highriselink = $row[highriselink];						
+						}
+					
+					echo "<h3>" . $projekt . "</h3><ul><li>Kundeid: " . $kundeid . "</li><li>Kundenavn: " . $kundenavn . "</li><li>Tag: " . $tag . "</li><li>Kontaktdirektør: " . $kd . "</li></ul>";
 				}
 
 				
