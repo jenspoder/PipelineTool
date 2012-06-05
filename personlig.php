@@ -26,6 +26,7 @@ $pipelineejer = $_POST['pipelineejer'];
 $pipelineejer = htmlspecialchars($pipelineejer);
 $pipelineejer = strtoupper($pipelineejer);
 
+$afdelingsnummer = $afdeling[$pipelineejer];
 
 ?>
 
@@ -105,7 +106,7 @@ $pipelineejer = strtoupper($pipelineejer);
 				
 				// henter tenders fra tenders
 				
-				$get_tenders_query = "SELECT kundeid, projekt, kd, tag FROM tender WHERE pipelineejer = '$pipelineejer' AND status = '1'";
+				$get_tenders_query = "SELECT id, kundeid, projekt, kd, tag FROM tender WHERE pipelineejer = '$pipelineejer' AND status = '1'";
 
 				//kør sql
 				$result_tenders = mysqli_query($dbc, $get_tenders_query) or die("Kunne ikke hente tenders");
@@ -118,6 +119,7 @@ $pipelineejer = strtoupper($pipelineejer);
 					$kd = $row[kd];
 					$tag = $row[tag];
 					$tag = utf8_encode($tag);
+					$tenderid = $row[id];
 					
 					// Læs kunde-navn fra kunde-id
 					
@@ -135,7 +137,32 @@ $pipelineejer = strtoupper($pipelineejer);
 						$highriselink = $row[highriselink];						
 						}
 					
-					echo "<h3>" . $projekt . "</h3><ul><li>Kundeid: " . $kundeid . "</li><li>Kundenavn: " . $kundenavn . "</li><li>Tag: " . $tag . "</li><li>Kontaktdirektør: " . $kd . "</li></ul>";
+					// Tjek hvilken afdeling pipeline-ejeren tilhører
+					
+										
+					$andel = "andel" . $afdelingsnummer;
+					
+										
+					// Nyeste tender-revision for projekt
+					
+					$get_tenderdata_query = "SELECT value, sandsynlighed, $andel, start, slut, opdateret FROM tenderrevision WHERE tenderid = $tenderid ORDER BY id DESC Limit 0 , 1";
+
+					//kør sql
+					$result_tenderdata = mysqli_query($dbc, $get_tenderdata_query) or die("Kunne ikke hente tenderdata");
+					
+					while ($row = mysqli_fetch_array($result_tenderdata)){
+						
+						$value = $row[value];
+						$sandsynlighed = $row[sandsynlighed];
+						$andel_procent = $row[$andel];
+						$start = $row[start];
+						$slut = $row[slut];
+						$opdateret = $row[opdateret]; 
+						
+					}
+					
+					echo "<h3>" . $projekt . "</h3><ul><li>Kundeid: " . $kundeid . "</li><li>Kundenavn: " . $kundenavn . "</li><li>Tag: " . $tag . "</li><li>Kontaktdirektør: " . $kd . "</li><li>Værdi: " . $value . "</li><li>Sandsynlighed: " . $sandsynlighed . "</li></ul>";
+					
 				}
 
 				

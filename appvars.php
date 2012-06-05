@@ -9,4 +9,12 @@ $db = "pipelinetool";
 $db_user = "root";
 $db_pass = "root";
 
+//afdelingsvariabler
+
+$afdeling['JP'] = '1';
+$afdeling['HAL'] = '4';
+$afdeling['KJO'] = '2';
+
+
 ?>
+
