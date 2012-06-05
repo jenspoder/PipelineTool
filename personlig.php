@@ -1,16 +1,13 @@
 <?
-
-require_once("appvars.php");
-
 /** 
 
 Modellen for denne side er følgende:
 
 Standard
 - Inkluder standardvariabler
-- Inkluder regnefunktioner
-- Inkluder renderfunktioner
-- Hent pipeline-ejer fra URL
+- Inkluder regnefunktioner   // måske
+- Inkluder renderfunktioner  // måske
+- Eventuelt hent pipeline ejer fra URL.
 
 Hent data fra database
 
@@ -18,12 +15,17 @@ Hent data fra database
 - henter tenders where pipeline-ejer er lig det der er valgt gemmer i array - her efter LOOP der
 	- henter nyeste tender-revision
 	- henter data fra kunde-id'er
-- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specfikt på den relevante afdeling - l√∏ses i pulldown
+- Render tabellen (det interessante bliver hvordan jeg får pipeline til at være specifik på den relevante afdeling // trækkes fra et array i appvars indtil videre.
 
 **/
 
+require_once("../PipelineTool/appvars.php");
+
+
 $pipelineejer = $_POST['pipelineejer'];
+$pipelineejer = htmlspecialchars($pipelineejer);
 $pipelineejer = strtoupper($pipelineejer);
+
 
 ?>
 
@@ -40,7 +42,7 @@ $pipelineejer = strtoupper($pipelineejer);
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title><? echo $pipelineejer; ?>'s pipeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -65,10 +67,13 @@ $pipelineejer = strtoupper($pipelineejer);
   	<? require_once('../PipelineTool/navigation.php'); ?>
 
     <div class="container">
+		
 		<div id="table-area">
 			<h1><? echo $pipelineejer; ?>'s pipeline</h1>
-			<br />			
-			<table class="table">
+			<br />
+						
+<!-- udkommaterer table-start			
+				<table class="table">
 				<tr>
 					<th>Kunde</th>
 					<th>Projekt</th>
@@ -80,6 +85,33 @@ $pipelineejer = strtoupper($pipelineejer);
 					<th>Sidste kontakt</th>
 					<th>Solgt / Tabt</th>				
 				</tr>
+-->
+				<!-- Henter tenders fra databasen --!>
+				
+				<?
+				
+				// få forbindelse til MySQL Server
+				$dbc = mysqli_connect($db_host, $db_user, $db_pass, $db) or die ('error connecting to mysql server');				
+				// henter tenders fra tenders
+				$get_tenders_query = "SELECT kundeid, projekt, kd, tag FROM tender WHERE pipelineejer = '$pipelineejer' AND status = '1'";
+
+				//kør sql
+				$result = mysqli_query($dbc, $get_tenders_query) or die("Kunne ikke hente tenders");
+
+				while ($row = mysqli_fetch_array($result)){
+				
+				$kundeid = $row[kundeid];
+				$projekt = $row[projekt];
+				$kd = $row[kd];
+				$tag = $row[tag];
+				
+				echo "<h1>" . $projekt . "</h1><ul><li>Kundeid: " . $kundeid . "</li><li>Tag: " . $tag . "</li><li>Kontaktdirektør: " . $kd . "</li></ul>";
+				}
+
+				
+				?>
+				
+<!-- udkommatterer table-rows
 				<tr>
 					<td>3F <a href="https://peytzco.highrisehq.com/companies/33185520-3f"><i class="icon-share"></i></a></td>
 					<td>Mobil spørgeskema</td>
@@ -92,6 +124,7 @@ $pipelineejer = strtoupper($pipelineejer);
 					<td>X / V</td>
 				</tr>
 			</table>
+-->
 		</div>		
 	 
 	 <p><a class="btn" href="#">Tilføj nyt projekt</a></p>

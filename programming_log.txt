@@ -3,13 +3,43 @@
 TODOS:
 
 	FRONTEND:
-		- Få lavet grundstruktur i navigation
+		- Få lavet grundstruktur i navigation @done
 	
 	STRUKTUR:
 		- Få etableret grundfunktioner (render, calculate)
 		- Standard var_includes (til database hook-up og navne og den slags)
 
 ---------------------------
+## 2012-06-05
+
+Har fået lavet en header der tilpasser sig hvor den sidder (navigation.php)
+
+Tænker nu at jeg skal igang med at etablere et Grund-MVP der vil gøre de enkelte afdelingschefer i stand til at overskue deres pipeline, og editere dem.
+
+	Personlig:
+	
+	- Slå projekter op per bruger.
+	- Lav total.
+	- Input projekt.
+	- Edit projekt (gem revisioner)
+	- Håndter tid... ellers gå tilbage til at inputte enkelt format a la Q4 stuff.
+	
+	Afdeling:
+	
+	- Slå projekter op per afdeling
+	- Lav total
+	- Edit projekt.
+	- Håndter tid... ellers gå tilbage til at inputte enkelt format a la Q4 stuff.
+	
+	Overblik:
+	
+	- To be done
+	
+	Admin:
+	
+	- To be done
+
+
 ## 2012-06-03 En masse grundstruktur på plads
 
 Har endelig fået lavet en masse grundstruktur. Der er stadig rigtig meget at pille med.
@@ -39,7 +69,3 @@ Overvejer hvordan man kan bruge Highrise som grundlag for en kundeliste, og så 
 [Link til Highrise API](https://github.com/37signals/highrise-api)
 
 Man kan læse alt her også [XML modellen for Companies](https://github.com/37signals/highrise-api/blob/master/sections/companies.md)
-
-
-
-

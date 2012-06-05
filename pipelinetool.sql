@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Vært: localhost
--- Genereringstid: 04. 06 2012 kl. 11:58:33
+-- Genereringstid: 05. 06 2012 kl. 12:55:05
 -- Serverversion: 5.5.9
 -- PHP-version: 5.3.6
 
@@ -31,12 +31,13 @@ CREATE TABLE `kunder` (
   `kundenummer` int(11) DEFAULT NULL,
   `highriselink` text COLLATE utf8_danish_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=3 ;
 
 --
 -- Data dump for tabellen `kunder`
 --
 
+INSERT INTO `kunder` VALUES(2, 'Storebælt', NULL, '#');
 
 -- --------------------------------------------------------
 
@@ -54,12 +55,13 @@ CREATE TABLE `tender` (
   `tag` text COLLATE utf8_danish_ci,
   `pipelineejer` tinytext COLLATE utf8_danish_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_danish_ci AUTO_INCREMENT=2 ;
 
 --
 -- Data dump for tabellen `tender`
 --
 
+INSERT INTO `tender` VALUES(1, NULL, 'Søgemaskine', '1', 'JP', 'JP', 'Diverse', 'JP');
 
 -- --------------------------------------------------------
 

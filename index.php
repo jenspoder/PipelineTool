@@ -64,11 +64,7 @@
   	
 		<div class="container">
 		      <h1>Pipeline per afdeling <small>indeværende kvartal</small></h1>
-		      <hr>
-		      
-		      <p> <? echo $side; ?> </p>
-		      
-		      
+		      <hr>		      
 			      <div id="pipeline-gauges" class="row">
 			      		<div class="span3">
 				      		<h3>Analyse:</h3>
