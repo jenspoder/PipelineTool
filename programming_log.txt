@@ -12,6 +12,18 @@ TODOS:
 ---------------------------
 ## 2012-06-05
 
+Lang dag med utf-8 problemer. Lige meget hvor meget jeg configurerer på min mysql installation kan jeg ikke få den til at holde op med at smide latin tekst i hovedet på mig når jeg querier databasen. Træls.
+
+Nu har jeg lavet et workaround. Og så må jeg få højere magters hjælp senere.
+
+Har arbejdet hårdt på personlig siden. Det er blevet til et big-ass loop, som sikkert kunne løses skønnere, men hey! det virker :) Kan altid lave functions og den slags når jeg kommer til opslag på afdelingssiderne og kan se hvad der kan genbruges.
+
+- Næste step er at begynde at tegne de tabeller jeg skal tegne.
+- Og så få lavet en opret data-dims.
+
+
+## 2012-06-05
+
 Har fået lavet en header der tilpasser sig hvor den sidder (navigation.php)
 
 Tænker nu at jeg skal igang med at etablere et Grund-MVP der vil gøre de enkelte afdelingschefer i stand til at overskue deres pipeline, og editere dem.
